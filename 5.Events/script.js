@@ -56,4 +56,12 @@ document.addEventListener('keydown', function(event){
   }
 })
 
+
+for (let displayedSquares of document.getElementsByClassName('displayedsquare-wrapper')) {
+  displayedSquares.addEventListener('click', function(e) {
+    alert (e.target.classList[1])
+  })
+}
+
+
 // https://stackoverflow.com/questions/3942878/how-to-decide-font-color-in-white-or-black-depending-on-background-color
