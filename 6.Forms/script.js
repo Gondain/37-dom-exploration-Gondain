@@ -34,7 +34,14 @@ passwordConfirm.addEventListener('keyup', () => {
     }
 })
 
-document.getElementById('toggle-darkmode').addEventListener('change', function(e) {
-     document.body.style.backgroundColor = '#000000'
-     document.body.style.color = '#FFFFFF'
+const toggleDarkMode = document.getElementById('toggle-darkmode')
+toggleDarkMode.addEventListener('change', () => {
+    if (toggleDarkMode.value === "dark") {
+        document.body.style.backgroundColor = '#000000'
+        document.body.style.color = '#FFFFFF'   
+    } else if (toggleDarkMode.value === "light") {
+        document.body.style.backgroundColor = 'initial'
+        document.body.style.color = 'initial'
+    }
 })
+
